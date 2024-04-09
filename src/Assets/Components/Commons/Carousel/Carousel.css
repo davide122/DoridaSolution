@@ -1,0 +1,39 @@
+.carousel {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 10%; /* Regola l'altezza per adattarla ai tuoi quadrati */
+  background-color: #000; /* o il colore di sfondo desiderato */
+  z-index: 1;
+}
+
+.scrolling-container {
+  display: flex;
+  animation: scroll-left 40s linear infinite;
+}
+
+.service-box {
+  position: relative;
+  z-index: 3;
+  min-width: 200px; /* o la larghezza che preferisci */
+  height: 100px; /* o l'altezza che preferisci */
+  margin: 0 20px; /* Spazio tra i quadrati */
+  background-color: trasparent; /* Lilla */
+  border-bottom:2px solid rgb(202, 141, 202);
+  padding: 3px 3px 3px 3px;
+  color: white; /* Colore del testo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+ width: 100%;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

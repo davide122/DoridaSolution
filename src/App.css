@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  overflow-x: hidden;
 }
 
 .App-logo {
@@ -35,4 +36,543 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.margin{
+
+}
+
+
+.HandLeft{
+ 
+ 
+}
+
+.hero-spline{
+
+
+
+}
+
+
+
+.imgHuman{
+  width: 100%;
+  object-fit: cover;
+  margin: 0;
+  height: 100vh;
+ 
+
+ 
+}
+
+@keyframes spaziale {
+  0% {
+    transform: translateX(0px) scale(1);
+    color: #a200ff;
+  }
+  25% {
+    transform: translateX(-20px) scale(1.2);
+    color: #ff00ff;
+  }
+  50% {
+    transform: translateY(20px) scale(0.8);
+    color: #00ffff;
+  }
+  75% {
+    transform: translateX(20px) scale(1.2);
+    color: #ff0000;
+  }
+  100% {
+    transform: translateX(0px) scale(1);
+    color: #a200ff;
+  }
+}
+
+.Animated {
+  display: inline-block;
+  animation: spaziale 5s infinite;
+  white-space: nowrap;
+}
+
+
+.community-section {
+  background-color: #000; /* Colore di sfondo */
+  color: #fff; /* Colore del testo */
+}
+
+.community-text h2 {
+  font-size: 2.5rem; /* Adatta questa dimensione al tuo design */
+  /* Aggiungi qui stili aggiuntivi per il titolo se necessario */
+}
+
+.stat-item {
+ background-color: #000;
+  color: #fff;
+  margin: 1rem 0; /* Spaziatura verticale */
+  padding: 2rem; /* Padding interno */
+  /* Utilizza le classi di utilità di Bootstrap se preferisci */
+}
+
+.stat-item h3 {
+  font-size: 2rem; /* Adatta questa dimensione al tuo design */
+  /* Aggiungi qui stili aggiuntivi per i numeri se necessario */
+}
+
+.stat-item p {
+  font-size: 1rem; /* Adatta questa dimensione al tuo design */
+  /* Aggiungi qui stili aggiuntivi per le descrizioni se necessario */
+}
+
+.posizionetitolo{
+  position: relative; 
+  top:-350px;
+}
+
+.Info-Button {
+  display: flex;
+  align-items: center;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 17px;
+  padding: 0.8em 1.5em 0.8em 1.2em;
+  color: rgb(0, 0, 0);
+  background: #ffffff;
+  background: linear-gradient(0deg, rgb(176, 69, 218) 0%, rgb(255, 255, 255) 100%);
+  border: none;
+  box-shadow: 0 0.7em 1.5em -0.5em #eae9f0be;
+  letter-spacing: 0.05em;
+  border-radius: 20em;
+}
+
+.Download-Button svg {
+  margin-right: 8px;
+}
+
+.Download-Button:hover {
+  box-shadow: 0 0.5em 1.5em -0.5em #4d36d0be;
+}
+
+.Download-Button:active {
+  box-shadow: 0 0.3em 1em -0.5em #4d36d0be;
+}
+
+.buttontalk{
+  position: absolute;
+  top: 20%;
+  z-index: 100;
+}
+
+.Utilies{
+  
+position: absolute;
+bottom: 10%;
+right: 10%;
+z-index: 100;
+}
+
+@media (max-width: 768px) {
+  .Utilies {
+    position: absolute;
+bottom: 0;
+right: 10%;
+z-index: 100;
+  }
+  .community-text h2{
+    position: relative ;
+    top: -190px;
+  }
+  #titolobottom{
+    position: relative;
+    top: 50px;
+  }
+}
+
+.video{
+  object-fit: contain;
+  width: 100%;
+  height: 100vh;
+}
+
+
+.gradient-text {
+  background: linear-gradient(45deg, #EC6AFF, #FFFFFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent; /* Fallback: vedere nota sotto */
+  font-size: 2rem; /* O la dimensione desiderata */
+}
+
+.BasicTitle{
+  font-weight: 200 !important;
+  color: #61dafb !important;
+  border-radius: 45px;
+
+}
+
+.CardServices {
+width: 100%;
+overflow: hidden;
+border: 1px solid transparent ;
+}
+
+
+
+.slide{
+  
+
+margin: 0;
+
+}
+
+.Zoom{
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+
+}
+
+.h{
+  height: 100%;
+}
+.Zoom:hover{
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+
+.Zoom:hover::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.Zoom:hover::after {
+  opacity: 1;
+}
+
+
+/* Aggiungi questo nel tuo CSS globale o specifico del componente */
+
+.modal-content {
+  background: linear-gradient(145deg, #3b3b3b, #222);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  border-radius: 20px 0px 0px 20px;
+  overflow: hidden;
+  height: 80%;
+  width: 100%;
+ 
+}
+
+.modal-header {
+  background: black !important;
+  border-bottom: 1px solid #000000 !important;
+  color: #8787ca;
+  text-shadow: 1px 1px 1px #000;
+}
+
+.modal-title {
+  font-weight: bold;
+  color: #a2a2d8;
+  text-transform: uppercase;
+}
+
+.modal-body {
+  background-color: black !important;
+  color: #000000 !important;
+  margin: 0;
+  font-size: 1.05em; /* Slightly larger font size for better readability */
+}
+
+.Blu{
+  border: 3px solid #01b8fb !important ;
+
+}
+
+.Lilla{
+
+  border: 3px solid #EC6AFF !important ;
+
+}
+.modal-footer {
+  background: #000000 !important;
+  border-top: 1px solid #1f1f1f;
+}
+
+.modal-footer button {
+  background-color: #4a4ae6;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 2px #000;
+}
+
+.modal-footer button:hover {
+  background-color: #5656ee;
+  cursor: pointer;
+}
+
+/* Animation for modal appearance */
+@keyframes modalEntry {
+  from {
+      transform: scale(0.5);
+      opacity: 0;
+  }
+  to {
+      transform: scale(1);
+      opacity: 1;
+  }
+}
+
+.modal-content {
+  animation-name: modalEntry;
+  animation-duration: 0.5s;
+}
+
+/* Optional: Animate modal backdrop */
+.modal-backdrop.show {
+  opacity: 0.7 !important; /* Override default Bootstrap styles */
+}
+
+/* Inserisci eventuali ulteriori stili che desideri personalizzare */
+
+
+@keyframes modal3DEntry {
+  from {
+      transform: scale(0) rotateX(70deg);
+      opacity: 0;
+      transform-origin: bottom;
+  }
+  to {
+      transform: scale(1) rotateX(0deg);
+      opacity: 1;
+      transform-origin: bottom;
+  }
+}
+
+.modal-content {
+  animation-name: modal3DEntry;
+  animation-duration: 0.5s;
+}
+
+
+.Titolo{
+  color: #EC6AFF !important;
+  font-size: 50px !important;
+  font-weight: 800;
+  text-align: start;
+margin: 10px 0% 10% 0%;
+}
+
+.Sottotitolo{
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+  font-weight: 400;
+  text-align: start;
+}
+
+.imageExplain{
+  width: 100%;
+  height: 100%;
+ margin: 0;
+  overflow: hidden;
+}
+
+.modal-open-custom .modal-backdrop.show {
+  opacity: 0.95 !important; /* Sfumatura più scura */
+  background-color: #000000 !important; /* Cambia il colore di sfondo se necessario */
+}
+
+.TestoBlu{
+  color:#01b8fb !important ;
+
+}
+
+.max{
+  width: 100%;
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.Close-Button{
+  outline: none;
+  background-color: rgb(255, 225, 225);
+  border-radius: 50%;
+  border: 0px;
+  margin-left: 10px;
+  margin-bottom: 3px;
+  padding: 10px 10px 10px ;
+  
+}
+.CloseButtonDiv{
+background-color: rgba(45, 45, 45, 0.55);
+
+}
+
+.ChangeBlue{
+  background-color: #01b8fb !important;
+}
+
+.ChangeLilla{
+  background-color: #EC6AFF !important;
+}
+
+
+.miosvg{
+  position: absolute;
+  height: 100px;;
+  right: 0;
+
+}
+
+.h{
+  height: 100%;
+}
+
+
+.section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: #FFF;
+  transition: background-color 1s ease-in-out; /* Transizione fluida del colore di sfondo */
+}
+
+/* Stili per la sezione che cambia colore */
+#changeColor {
+  background-color: #DA70D6; /* Colore iniziale */
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0; /* Si attacca in cima alla viewport */
+  z-index: 10; /* Assicura che si sovrapponga correttamente alle sezioni sottostanti */
+}
+
+/* Stili per il titolo che cambia, includendo un'animazione */
+.Title {
+  color: #EC6AFF; /* Colore iniziale del testo */
+  font-size: 100px;
+  font-weight: 800;
+  transition: color 1s ease-in-out; /* Transizione fluida del colore del testo */
+  opacity: 0; /* Partenza da invisibile */
+  transform: translateY(20px); /* Parte spostato verso il basso */
+  animation: fadeInUp 1s ease-out forwards; /* Anima l'ingresso con un "fade in" verso l'alto */
+}
+
+/* Definizione dell'animazione per il titolo */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Stili aggiuntivi per le altre sezioni, se necessario */
+#sectionBelow1 { background-color: #0f0e3e; }
+#sectionBelow2 { background-color: #000000; }
+
+.fadeIn {
+  animation: fadeIn 0.2s ease-out forwards; /* Usa 'forwards' per mantenere lo stato finale */
+}
+
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f0f0f0; /* Sfondo chiaro per contrastare con i colori del form */
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideUpFadeIn 0.8s ease-out forwards;
+}
+
+.contact-form input, .contact-form textarea {
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: border-color 0.3s ease-in-out, transform 0.3s ease;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+  border-color: #007bff; /* Colore di highlight */
+  outline: none;
+  transform: translateY(-3px);
+}
+
+.contact-form button {
+  padding: 10px 20px;
+  background-color: #EC6AFF; /* Stile coerente con il colore del titolo */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease;
+  transform: translateY(0);
+}
+
+.contact-form button:hover {
+  background-color: #bf53e2; /* Un po' più scuro al hover */
+  transform: translateY(-3px);
+}
+
+@keyframes slideUpFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.logo{
+  width: 100px;
+
+  height: 100px;
+}
+
+.trasparent{
+  background-color: transparent;
+  color:rgb(255, 255, 255);
+  outline: none;
+  border: none;
+  padding: 10px 10px 10px 10px;
+}
+
+.colorato{
+  background-color: #00ffff;
+}
+.top{
+  height: 30%;
+}
+.COLONNA1{
+  width: 10%;
+  background-color: WHITE;
+}
+
+.bg-darkGradient{
+  background-image: linear-gradient(to bottom, #000000, #535151);
+
 }

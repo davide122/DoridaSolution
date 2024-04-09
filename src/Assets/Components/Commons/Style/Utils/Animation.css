@@ -1,0 +1,27 @@
+@keyframes shineText {
+    0% {
+      background-position: left;
+    }
+    50% {
+      background-position: right;
+    }
+    100% {
+      background-position: left;
+    }
+  }
+  
+  .hand-gradient {
+    display: inline-block; /* Necessario per il corretto allineamento */
+    font-size: 2em; /* Dimensione del testo */
+    font-weight: bold; /* Peso del font per migliorare l'effetto */
+    background: linear-gradient(to right, #ffffff, #a200ff);
+    text-align: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; /* Standard per altri browser */
+    background-size: 200% auto; /* Dimensione del background per l'animazione */
+    animation: shineText 3s linear infinite; /* Applica l'animazione */
+  }
+  
+
+
