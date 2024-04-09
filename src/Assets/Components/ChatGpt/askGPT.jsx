@@ -10,7 +10,7 @@ const askGPT = async (question) => {
     },
     {
       headers: {
-        'Authorization': 'Bearer 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'
+        'Authorization': `${process.env.REACT_APP_OPENAI_KEY}`
       }
     }
   );

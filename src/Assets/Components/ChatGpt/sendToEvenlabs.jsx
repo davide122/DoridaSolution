@@ -18,7 +18,7 @@ const sendToEvenlabs = async (text) => {
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'audio/mpeg',
-        'xi-api-key': "f6f761fd6413118d0c6239f8b97be3d8"
+        'xi-api-key': `${process.env.REACT_APP_EVENLABS_KEY}`
       }
     }
   );

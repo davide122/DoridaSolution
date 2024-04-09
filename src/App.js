@@ -12,7 +12,7 @@ import Music from './Assets/Views/Music';
 function App() {
   return (
 
-    <Music></Music>
+    <HomePage></HomePage>
 
   );
 }
