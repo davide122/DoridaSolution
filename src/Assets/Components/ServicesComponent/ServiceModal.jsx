@@ -1,7 +1,5 @@
 import React, { useEffect } from 'react';
 import { Modal } from 'react-bootstrap';
-import ButtonPersonal from '../Commons/Style/Buttons/ButtonPersonal';
-import { CgClose } from "react-icons/cg";
 
 
 const ServiceModal = ({ show, onHide, serviceInfo }) => {
