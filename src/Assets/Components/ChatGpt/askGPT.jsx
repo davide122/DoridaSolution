@@ -11,7 +11,7 @@ const askGPT = async (question) => {
     },
     {
       headers: {
-        'Authorization': `Bearer ${openAIKey}`
+        'Authorization': `${openAIKey}`
       }
     }
   );
