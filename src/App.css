@@ -496,10 +496,7 @@ background-color: rgba(45, 45, 45, 0.55);
   flex-direction: column;
   max-width: 500px;
   margin: 50px auto;
-  padding: 20px;
-  background-color: #f0f0f0; /* Sfondo chiaro per contrastare con i colori del form */
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  
   opacity: 0;
   transform: translateY(50px);
   animation: slideUpFadeIn 0.8s ease-out forwards;
@@ -517,23 +514,25 @@ background-color: rgba(45, 45, 45, 0.55);
 .contact-form input:focus, .contact-form textarea:focus {
   border-color: #007bff; /* Colore di highlight */
   outline: none;
-  transform: translateY(-3px);
+  transform: translateY(-5px);
 }
 
 .contact-form button {
-  padding: 10px 20px;
-  background-color: #EC6AFF; /* Stile coerente con il colore del titolo */
-  color: white;
+  background-color: transparent; /* Stile coerente con il colore del titolo */
+  color: #bf53e2;
+
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out, transform 0.3s ease;
+  transition: background-color 0.3s ease-in-out, transform 0.5s ease ;
   transform: translateY(0);
+  font-size: 40px;
 }
 
 .contact-form button:hover {
-  background-color: #bf53e2; /* Un po' più scuro al hover */
-  transform: translateY(-3px);
+  
+  transform: scale(1.2);
+
 }
 
 @keyframes slideUpFadeIn {
