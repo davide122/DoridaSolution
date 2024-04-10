@@ -10,7 +10,7 @@ const DoridaMusic = () =>{
 <button className="text-center trasparent"><FiSearch className="fs-2 text-center"/></button>
 </div>
 
-<div className=" bg-dark  my-2 rounded-2 d-flex flex-column justify-content-center align-items-center bg-dark vh-100">
+<div className="bg-dark  my-2 rounded-2 d-flex flex-column justify-content-center align-items-center bg-dark vh-100">
 
 </div>
 
