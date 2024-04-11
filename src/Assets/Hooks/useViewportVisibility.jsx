@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-const useViewportVisibility = (ref, threshold = 1) => {
+const useViewportVisibility = (ref, threshold = 0.5) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {

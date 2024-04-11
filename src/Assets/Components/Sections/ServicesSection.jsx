@@ -1,8 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { animateScroll as scroll } from 'react-scroll';
-import hand from "../Commons/video/Manomigliorata.mp4";
 import useViewportVisibility from '../../Hooks/useViewportVisibility';
 import { motion } from 'framer-motion';
+import hand from "../Commons/video/Manomigliorata.mp4";
 import Palla from "../Commons/video/Palla.mp4";
 import { throttle } from 'lodash'; // Assicurati di avere lodash installato
 
@@ -58,23 +57,6 @@ const ServicesSection = () => {
     };
   }, [handleScroll]); // Include handleScroll come dipendenza
 
-  useEffect(() => {
-    const handleWheel = (event) => {
-      const delta = Math.max(-1, Math.min(1, event.deltaY));
-      scroll.scrollMore(delta * 50, {
-        duration: 5000,
-        delay: 2,
-        smooth: 'easeInOutQuart'
-      });
-    };
-
-    window.addEventListener('wheel', handleWheel);
-
-    return () => {
-      window.removeEventListener('wheel', handleWheel);
-    };
-  }, []);
-
   return (
     <div ref={sectionRef}>
       <div className="bg-black position-relative">
@@ -84,7 +66,7 @@ const ServicesSection = () => {
               <video src={hand} ref={videoRef} className="HandLeft w-100" muted></video>
             </div>
             <div className="col-12 col-md-6 d-flex justify-content-center">
-              <motion.h1 variants={textVariants} initial="hidden" animate={isVisible && "visible" } className='Title text-right mx-2' id='titolobottom'>
+              <motion.h1 variants={textVariants} initial="hidden" animate={isVisible ? "visible" : "hidden"} className='Title text-right mx-2' id='titolobottom'>
                 Strategie Innovative, risultati concreti.
               </motion.h1>
             </div>
@@ -108,7 +90,7 @@ const ServicesSection = () => {
                 </div>
                 <div className="stat-item my-3 p-4">
                   <h3>Soluzioni personalizzate</h3>
-                  <p>Perché ogni Business è unico, le nostre soluzioni sono tagliate su misura per le tue esigenze.</p>
+                  <p>Perché ogni Business è unico, le nostre soluzioni sono tagliate su misura per le tue esigenze specifiche.</p>
                 </div>
                 <div className="stat-item my-3 p-4">
                   <h3>Connessione e Collaborazione</h3>

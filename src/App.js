@@ -13,7 +13,7 @@ import Arriviamo from './Assets/Components/Sections/Arriviamo';
 function App() {
   return (
  
-    <Arriviamo/>
+    <HomePage></HomePage>
 
   );
 }

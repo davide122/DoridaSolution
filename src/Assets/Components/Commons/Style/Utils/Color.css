@@ -45,7 +45,7 @@ p{
   
   @media (max-width: 768px) {
     .Title {
-      font-size: 65px;
+      font-size: 62px;
     
       text-align: center;/* Riduci leggermente la dimensione su schermi più piccoli */
       letter-spacing: 2px;

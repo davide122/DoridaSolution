@@ -9,7 +9,7 @@ const Arriviamo = () => {
 <form name="contact" className="contact-form" netlify>
     <div className="d-flex">
   <p className="">
-    <label> <input type="email" placeholder="do@gmail.com" name="email" className="" /></label>
+    <label> <input type="email" placeholder="latuamail.com" name="email" className="" /></label>
   </p>
   <p>
     <button type="submit"><HiOutlinePaperAirplane></HiOutlinePaperAirplane></button>
