@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import logo from "../Image/logo.png";
 import { FaBars, FaTimes } from 'react-icons/fa'; // Assicurati di avere 'react-icons' nel tuo progetto
+import { Link } from 'react-router-dom';
 
 const MyNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,8 +26,9 @@ const MyNavbar = () => {
       style={{ boxShadow: '0 2px 5px rgba(0,0,0,0.1)', backgroundColor: '#000' }} // Sfondo nero
     >
       <div className="container-fluid text-center justify-content-center justify-content-lg-between">
-        <a href="/" className="navbar-brand">
+        <a href="/" className="navbar-brand d-flex align-items-center">
           <img src={logo} alt="Logo" className='logo' />
+          <p className='fs-5 mt-4 ms-0'>Dorida Solution</p>
         </a>
 
         <button
@@ -50,13 +52,16 @@ const MyNavbar = () => {
               <a className="nav-link active  " aria-current="page" href="#">Home</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Portfolio</a> 
+            <Link to="/Music" className='text-decoration-none'><a className="nav-link text-decoration-none" href="#">Dorida Music</a> </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">About Us</a>
+              <a className="nav-link" href="#">Servizi</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Contact</a> 
+              <a className="nav-link" href="#">Contatti</a> 
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">Chi siamo</a> 
             </li>
           </ul>
         </div>

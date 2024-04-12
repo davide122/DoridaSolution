@@ -65,7 +65,7 @@ html {
   width: 100%;
   object-fit: cover;
   margin: 0;
-  height: 100vh;
+height: 80%;
  
 
  
@@ -697,4 +697,151 @@ opacity: 0.1;
 
 .bor{
   
+}
+
+.dorida-music {
+  display: flex;
+  height: 100vh;
+  background-color: #121212; /* Sostituisci con il tuo colore scelto */
+  
+}
+
+.sidebar {
+  width: 15%;
+  background-color: #000; /* Sostituisci con il tuo colore scelto */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px 10px 10px 10px;
+ 
+  
+}
+
+.sidebar-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon {
+  color: #b3b3b3; /* Sostituisci con il tuo colore scelto */
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+.icon.active {
+  color: #1DB954; /* Sostituisci con il tuo colore scelto */
+}
+
+.main-content {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.header {
+  height: 100vh;
+  background-color: #282828; /* Sostituisci con il tuo colore scelto */
+  
+  
+  padding: 0 20px;
+  border-radius: 10px 10px 10px 10px;
+  margin: 10px 10px 10px 10px;
+}
+.header-playlist{
+  height: 30vh;
+  width: 100%;
+  
+}
+.content {
+  padding: 20px;
+  /* Qui definire lo stile per il contenuto principale */
+}
+
+.player-bar {
+  position: fixed;
+  bottom: 0;
+  height: 90px;
+  width: 100%;
+  background-color: #181818; /* Sostituisci con il tuo colore scelto */
+  display: flex;
+  align-items: center;
+  /* Qui definire lo stile per i controlli del player */
+}
+
+.player-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: #282828; /* Sostituisci con il tuo colore scelto */
+}
+
+.current-track {
+  display: flex;
+  align-items: center;
+}
+
+.track-info {
+  display: flex;
+  align-items: center;
+}
+
+.thumbnail img {
+  width: 50px; /* Regola la dimensione come preferisci */
+  height: 50px; /* Regola la dimensione come preferisci */
+  margin-right: 10px;
+}
+
+.info .title {
+  font-weight: bold;
+  color: #fff;
+}
+
+.info .artist {
+  color: #ccc;
+}
+
+.player-controls {
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  background: none;
+  border: none;
+  color: #fff;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.play-btn{
+  font-size: 1.5em !important; /* Più grande rispetto agli altri pulsanti */
+  color: #1DB954 !important; /* Colora il pulsante di play con un verde Spotify o scegli un lilla */
+  margin: 0 25px !important;
+  background-color: white !important;
+  border-radius: 50% !important;
+  transition: transform 0.2s ease-in-out;
+}
+
+.play-btn:hover {
+  transform: scale(1.2); /* Sottolinea al passaggio del mouse con un effetto di ingrandimento */
+}
+
+.control-btn {
+  font-size: 1em; /* Dimensione standard per i pulsanti */
+  color: #fff; /* Colore standard dei pulsanti */
+  transition: color 0.2s ease-in-out;
+}
+
+.control-btn:hover {
+  color: #1DB954; /* Cambia colore al passaggio del mouse */
+}
+
+.card-playlist{
+  width: 100%;
+  padding: 0 10px;
+  background-color: #7979792e;
+  border-radius: 4px 4px 4px 4px;
+  text-align: start;
 }

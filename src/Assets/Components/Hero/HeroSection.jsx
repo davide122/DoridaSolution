@@ -21,7 +21,7 @@ const HeroSection = () => {
         <div className="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center align-items-md-start text-center text-md-left bg-black hero-text vh-50">
           <h1 className="text-white Title">La Dorida Solution <span className='d-none d-xl-block'>è qui per te.</span></h1>
           <h2 className="text-white Title2 d-md-none ">è qui per aiutarvi</h2>
-         <button className='Call-Button mt-2 mt-md-3 p-md-3 p-2'>Contattaci adesso per un preventivo gratuito</button>
+         <button className='Call-Button mt-2 mt-md-3 p-md-3 p-2'>Preventivo gratuito</button>
         </div>
         
         <div className="col-12 col-md-6 ">
@@ -32,7 +32,7 @@ const HeroSection = () => {
               // Mostra lo Spline se showSpline è true
               <div>
               <Spline scene="https://prod.spline.design/fG63sTT4o138JOix/scene.splinecode" className='vh-100 d-none d-md-block d-md' />
-              <div className="d-block d-md-none vh-100">
+              <div className="d-block d-md-none vh-100 mx-0">
               <img src={imagehuman} alt="Mobile" className="imgHuman" />
               </div>
             </div>
