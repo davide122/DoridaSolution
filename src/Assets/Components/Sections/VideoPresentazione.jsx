@@ -28,7 +28,7 @@ const VideoPresentazione = () => {
     <div style={{ height: '100vh', width: '100%', overflow: '', position: 'relative' }}>
       <video
         ref={videoRef}
-        src="https://doridasolutionbucket.s3.eu-north-1.amazonaws.com/rinositoweb.mp4" type="video/mp4"
+        src="" type="video/mp4"
         style={{ width: '100%', height: '100%', objectFit: 'cover', position:"relative", bottom:"-8px" }}
         loop
         playsInline
