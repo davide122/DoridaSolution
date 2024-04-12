@@ -18,8 +18,8 @@ function App() {
  <Router>
   <Routes>
 <Route path='/' element={<Arriviamo />} />
-<Route path='/home' element={<HomePage />} />
-<Route path="*" element={<PageNotFound />} />
+<Route path='/home' element={<HomePage />}/>
+<Route path="*" element={<PageNotFound />} /> 
   </Routes>
  </Router>
    
