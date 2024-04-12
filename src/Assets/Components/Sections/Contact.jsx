@@ -1,3 +1,5 @@
+import { HiOutlinePaperAirplane } from "react-icons/hi2";
+
 const Contact = () =>{
     return (
         <form 
@@ -5,10 +7,11 @@ const Contact = () =>{
           method="POST"
           className="contact-form"
         >
-          <input type="text" name="name" placeholder="Il tuo nome" required />
+          <div className="d-flex justify-content-center align-items-center">
           <input type="email" name="email" placeholder="La tua email" required />
-          <textarea name="message" rows="5" placeholder="Il tuo messaggio" required></textarea>
-          <button type="submit">Invia</button>
+          <button type="submit"><HiOutlinePaperAirplane/></button>
+          </div>
+
         </form>
       );
 };

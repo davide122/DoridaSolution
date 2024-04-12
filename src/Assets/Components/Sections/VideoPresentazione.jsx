@@ -1,6 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
 import useViewportVisibility from '../../Hooks/useViewportVisibility';
-import rinositoweb from "../Commons/video/rinositoweb.mp4";
 import { FaVolumeUp, FaVolumeMute } from 'react-icons/fa'; // Importa le icone da react-icons
 
 const VideoPresentazione = () => {
