@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BsMic, BsMicFill } from "react-icons/bs";
-import Loader from '../../Components/Commons/Style/Utils/Loader';
+import Loader from '../Commons/Style/Utils/Loader';
 import useSpeechToTextResponse from './useSpeechToTextResponse';
 import "../ChatGpt/chat.css"
 const ChatWithGPT = () => {
@@ -37,7 +37,7 @@ const ChatWithGPT = () => {
 
   return (
     <div>
-      <button onClick={startListening} disabled={isListening || isLoading} className='Info-Button'>
+      <button onClick={startListening} disabled={isListening || isLoading} className='Call-Button'>
         {isListening ? <BsMicFill /> : <BsMic />}
       </button>
       <div className='Chat'>

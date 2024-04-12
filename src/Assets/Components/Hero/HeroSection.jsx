@@ -21,7 +21,7 @@ const HeroSection = () => {
         <div className="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center align-items-md-start text-center text-md-left bg-black hero-text vh-50">
           <h1 className="text-white Title">La Dorida Solution <span className='d-none d-xl-block'>è qui per te.</span></h1>
           <h2 className="text-white Title2 d-md-none ">è qui per aiutarvi</h2>
-          {/* Pulsante per cambiare tra Spline e video */}
+         <button className='Call-Button mt-2 mt-md-3 p-md-3 p-2'>Contattaci adesso per un preventivo gratuito</button>
         </div>
         
         <div className="col-12 col-md-6 ">
@@ -45,7 +45,7 @@ const HeroSection = () => {
            
             
             <div className='Utilies'>
-        <button onClick={handleButtonClick} className="Info-Button mb-2 "> {showSpline ? <BsChatDots></BsChatDots> : <BsRobot></BsRobot>}</button>
+        <button onClick={handleButtonClick} className="Call-Button mb-2 "> {showSpline ? <BsChatDots></BsChatDots> : <BsRobot></BsRobot>}</button>
         <ChatWithGPT className="buttontalk "></ChatWithGPT>
           </div>
           </div>

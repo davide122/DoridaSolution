@@ -26,7 +26,7 @@ const MyNavbar = () => {
     >
       <div className="container-fluid text-center justify-content-center justify-content-lg-between">
         <a href="/" className="navbar-brand">
-          <img src={logo} alt="Logo" className='logo' style={{ maxHeight: '70px' }} />
+          <img src={logo} alt="Logo" className='logo' />
         </a>
 
         <button
@@ -47,7 +47,7 @@ const MyNavbar = () => {
         <div className={`collapse navbar-collapse ${isOpen ? 'show' : ''}`}>
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">Home</a>
+              <a className="nav-link active  " aria-current="page" href="#">Home</a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">Portfolio</a> 
