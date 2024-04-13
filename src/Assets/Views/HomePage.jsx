@@ -1,5 +1,5 @@
 
-import Carouseltext from "../Components/Commons/Carousel/Carouseltext";
+import Carouseltext from "../Components/Carousel/Carouseltext";
 
 import MyNavbar from "../Components/Commons/Headers/MyNavbar";
 import HeroSection from "../Components/Hero/HeroSection";
@@ -11,7 +11,7 @@ import VideoPresentazione from "../Components/Sections/VideoPresentazione";
 import ServicesExplain from "../Components/ServicesComponent/ServicesExplain";
 import ExplainPeople from "../Components/Sections/ExplainPeople";
 import MyFooter from "../Components/Commons/FOOTER/MyFooter";
-import Superior from "../Components/Commons/Headers/Superior";
+
 
 const HomePage = () => {
     return(

@@ -1,73 +1,87 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import logo from "../Image/logo.png";
-import { FaBars, FaTimes } from 'react-icons/fa'; // Assicurati di avere 'react-icons' nel tuo progetto
+import { FaBars, FaUserCircle, FaHome, FaMusic, FaBriefcase, FaPhone, FaInfoCircle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-
+import logo from "../../Commons/Image/logo.png";
+import { Offcanvas } from 'react-bootstrap'; // Assicurati di avere importato Offcanvas
+import "./mynav.css"
 const MyNavbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+    const [show, setShow] = useState(false);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+    const toggleOffcanvas = () => setShow(!show);
 
-  // Varianti per animazioni Framer Motion
-  const variants = {
-    open: { rotate: 90, scale: 1.2 },
-    closed: { rotate: 0, scale: 1 }
-  };
+    return (
+        <nav className="navbar navbar-expand-lg navbar-dark" style={{ backgroundColor: '#000' }}>
+            <div className="container-fluid">
+                <Link to="/" className="navbar-brand d-flex align-items-center">
+                    <img src={logo} alt="Logo" height="40" className="me-2" />
+                    <span>Dorida Solution</span>
+                </Link>
 
-  return (
-    <motion.nav
-      initial={{ y: -100, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.5 }}
-      className="navbar navbar-expand-lg navbar-dark fs-3"
-      style={{ boxShadow: '0 2px 5px rgba(0,0,0,0.1)', backgroundColor: '#000' }} // Sfondo nero
-    >
-      <div className="container-fluid text-center justify-content-center justify-content-lg-between">
-        <a href="/" className="navbar-brand d-flex align-items-center">
-          <img src={logo} alt="Logo" className='logo' />
-          <p className='fs-5 mt-4 ms-0'>Dorida Solution</p>
-        </a>
+                <button className="navbar-toggler" type="button" onClick={toggleOffcanvas}>
+                    <FaBars size={24} color="white" />
+                </button>
 
-        <button
-          className="navbar-toggler border-0" // Rimozione del bordo per pulizia
-          type="button"
-          onClick={toggleMenu}
-          aria-expanded={isOpen ? 'true' : 'false'}
-          aria-label="Toggle navigation"
-        >
-          <motion.div
-            animate={isOpen ? "open" : "closed"}
-            variants={variants}
-          >
-            {isOpen ? <FaTimes size={24} color="white" /> : <FaBars size={24} color="white" />} 
-          </motion.div>
-        </button>
+                <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                    <div className="navbar-nav">
+                        <Link to="/home" className="nav-item nav-link d-flex align-items-center">
+                            <FaHome className="me-2" /> Home
+                        </Link>
+                        <Link to="/music" className="nav-item nav-link d-flex align-items-center">
+                            <FaMusic className="me-2" /> Dorida Music
+                        </Link>
+                        <Link to="/services" className="nav-item nav-link d-flex align-items-center">
+                            <FaBriefcase className="me-2" /> Servizi
+                        </Link>
+                        <Link to="/contact" className="nav-item nav-link d-flex align-items-center">
+                            <FaPhone className="me-2" /> Contatti
+                        </Link>
+                        <Link to="/about" className="nav-item nav-link d-flex align-items-center">
+                            <FaInfoCircle className="me-2" /> Chi siamo
+                        </Link>
+                    </div>
+                </div>
 
-        <div className={`collapse navbar-collapse ${isOpen ? 'show' : ''}`}>
-          <ul className="navbar-nav ms-auto">
-            <li className="nav-item">
-              <a className="nav-link active  " aria-current="page" href="#">Home</a>
-            </li>
-            <li className="nav-item">
-            <Link to="/Music" className='text-decoration-none'><a className="nav-link text-decoration-none" href="#">Dorida Music</a> </Link>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Servizi</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Contatti</a> 
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Chi siamo</a> 
-            </li>
-          </ul>
-        </div>
-      </div>
-    </motion.nav>
-  );
+                <Link to="/profile" className="d-none d-lg-block ms-3">
+                    <FaUserCircle size={30} color="white" />
+                </Link>
+
+                <Offcanvas show={show} onHide={toggleOffcanvas} placement="end">
+                    <Offcanvas.Header closeButton>
+                        <Offcanvas.Title>Menu</Offcanvas.Title>
+                    </Offcanvas.Header>
+                    <Offcanvas.Body>
+                        <ul className="navbar-nav">
+                            <li className="nav-item">
+                                <Link to="/" className="nav-link" onClick={toggleOffcanvas}>
+                                    <FaHome className="me-2" />Home
+                                </Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link to="/music" className="nav-link" onClick={toggleOffcanvas}>
+                                    <FaMusic className="me-2" />Dorida Music
+                                </Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link to="/services" className="nav-link" onClick={toggleOffcanvas}>
+                                    <FaBriefcase className="me-2" />Servizi
+                                </Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link to="/contact" className="nav-link" onClick={toggleOffcanvas}>
+                                    <FaPhone className="me-2" />Contatti
+                                </Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link to="/about" className="nav-link" onClick={toggleOffcanvas}>
+                                    <FaInfoCircle className="me-2" />Chi siamo
+                                </Link>
+                            </li>
+                        </ul>
+                    </Offcanvas.Body>
+                </Offcanvas>
+            </div>
+        </nav>
+    );
 };
 
 export default MyNavbar;

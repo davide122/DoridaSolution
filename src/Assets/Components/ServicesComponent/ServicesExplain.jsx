@@ -1,17 +1,41 @@
+import React, { useState } from 'react';
+import Slider from 'react-slick';
+import ServiceModal from './ServiceModal'; 
 import verticale from "../Commons/Image/Intelligenza (1).png";
-import verticale2 from "../Commons/Image/Aivertical.png"
+import verticale2 from "../Commons/Image/Aivertical.png";
 import orizzontale from "../Commons/Image/orizzontale.png";
-import orizzontale2 from "../Commons/Image/Art.png"
+import orizzontale2 from "../Commons/Image/Art.png";
 import orizzontale3 from "../Commons/Image/Art (1).png";
-import orizzontaledevelop from "../Commons/Image/Webdevelopment.png"
-import orizzontaledevelop2 from "../Commons/Image/webdevelop2.png"
-import { motion } from "framer-motion";
-import ServiceModal from './ServiceModal'; // Assicurati che il percorso sia corretto
-import { useState } from "react";
+import orizzontaledevelop from "../Commons/Image/Webdevelopment.png";
+import orizzontaledevelop2 from "../Commons/Image/webdevelop2.png";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const ServicesExplain = () => {
     const [modalContent, setModalContent] = useState(null);
     const [modalShow, setModalShow] = useState(false);
+    const settings = {
+        dots: true, // continua a mostrare i puntini di navigazione in basso, se li vuoi ancora
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        adaptiveHeight: true,
+        arrows: false, // disabilita le frecce di navigazione
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true,
+                    arrows: false // assicurati che le frecce siano disabilitate anche nei breakpoints
+                }
+            }
+        ]
+    };
+    
 
     const columnData = [
         {
@@ -64,23 +88,34 @@ const ServicesExplain = () => {
         setModalShow(true);
     };
 
-
-
-
     return (
         <div className="container-fluid slide">
-            <div className="row">
+            {/* Carosello visibile solo su dispositivi mobili */}
+            <div className="d-md-none">
+                <Slider {...settings} className='my-3'>
+                    {columnData.flatMap(column => column.images).map(image => (
+                        <div key={image.id} onClick={() => { setModalContent(image); setModalShow(true); }}>
+                            <img src={image.src} alt={image.title} className="img-fluid rounded-5" />
+                            
+                        </div>
+                    ))}
+                </Slider>
+            </div>
+
+            {/* Layout griglia per dispositivi non mobili */}
+            <div className="d-none d-md-flex row">
                 {columnData.map(column => (
-                    <div key={column.id} className={`col-md-${column.colMdSize}  `}>
+                    <div key={column.id} className={`col-md-${column.colMdSize}`}>
                         {column.images.map(image => (
-                            <motion.div key={image.id} className="d-flex flex-row mb-5">
+                            <div key={image.id} className="mb-5">
                                 <img 
                                     src={image.src} 
                                     alt={image.title} 
-                                    className="img-fluid rounded-5 Zoom" 
-                                    onClick={() => handleImageClick(image)}
+                                    className="img-fluid rounded-5" 
+                                    onClick={() => { setModalContent(image); setModalShow(true); }}
                                 />
-                            </motion.div>
+                                
+                            </div>
                         ))}
                     </div>
                 ))}
@@ -89,12 +124,8 @@ const ServicesExplain = () => {
             {modalContent && (
                 <ServiceModal
                     show={modalShow}
-                    onHide={() => {
-                        setModalShow(false);
-                        setModalContent(null);
-                    }}
+                    onHide={() => { setModalShow(false); setModalContent(null); }}
                     serviceInfo={modalContent}
-
                 />
             )}
         </div>

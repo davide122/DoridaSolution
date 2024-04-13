@@ -1,0 +1,11 @@
+.user-icon {
+    font-size: 25px; /* Regola la dimensione secondo le tue preferenze */
+    cursor: pointer;
+  }
+
+  .navbar{
+    border-bottom: 1px solid rgb(48, 46, 46);
+    height: 70px;
+    padding: 7px 7px 7px 7px;
+    background-color: black !important;
+  }
