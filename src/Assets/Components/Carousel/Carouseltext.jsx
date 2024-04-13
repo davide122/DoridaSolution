@@ -16,7 +16,7 @@ const Carouseltext = () => {
     "Gestione Inventario",
     "Servizi AI",
     "Influencer",
-    "Acquisto sicuro di pagine avviate",
+    "pagine avviate",
     "Campagne Google Ads e Meta Ads",
     "Email Marketing",
     "Video promozionali",
@@ -32,16 +32,16 @@ const Carouseltext = () => {
   const ExtendedServices = [...Services, ...Services];
   return (
     <div className="carousel">
-      <div className="scrolling-container mx-2">
+      <div className="scrolling-container me-5">
         {ExtendedServices.map((service, index) => (
           <motion.div 
             key={index} 
-            className="service-box"
+            className="service-box "
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: (index % Services.length) * 0.2 }}
           >
-            <p className='fs-5'>{service}</p>
+            <p className='fs-6 ms-3'>{service}</p>
           </motion.div>
         ))}
       </div>

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { FiSkipBack, FiPlay, FiSkipForward } from "react-icons/fi";
-import "./music.css"; // Assicurati di avere questo file CSS nella tua directory
 import MusicNavbar from "./MusicNavbar";
 import MainContent from "./MainContent";
 import Player from "./Player";
+import Playlist from "./Playlist";
 
 const DoridaMusic = () => {
   return (
@@ -11,9 +11,10 @@ const DoridaMusic = () => {
       <MusicNavbar />
 
   
-      <div className="vh-100 ">
+      <div className=" ">
         <MainContent />
       </div>
+        <Playlist></Playlist>
 
   
       <Player/>

@@ -154,7 +154,7 @@ function MyFooter() {
         </div>
       </div>
       <hr />
-      <div className="w-100">
+      <div className="w-100 py-2">
         <p className="fs-6" id="PositionBottom">
           © {new Date().getFullYear()} Dorida Solution. Tutti i diritti
           riservati.

@@ -4,7 +4,7 @@ import logo from "../Image/logo.png"
 import "./Css/Musicnav.css"
 const MusicNavbar = () => {
   return(
-<nav className="navbar navbar-dark bg-black">
+<nav className="navbar navi navbar-dark bg-black ">
         <div className="container-fluid">
           <Link to="/" className="navbar-brand d-flex align-items-center">
             <img src={logo} alt="Dorida Logo" height="60" className="d-inline-block align-top" />
@@ -13,23 +13,20 @@ const MusicNavbar = () => {
 
           <div className="navbar-nav d-flex flex-row">
             <Link to="/" className="nav-link d-flex align-items-center me-3">
-              <FiHome /><span className="ms-2 navbar-text">Home</span>
+              <FiHome className="fs-4" /><span className="ms-2 navbar-text ">Home</span>
             </Link>
             <Link to="/music" className="nav-link d-flex align-items-center me-3">
-              <FiMusic /><span className="ms-2 navbar-text">Music</span>
+              <FiMusic   className="fs-4"/><span className="ms-2 navbar-text">Music</span>
             </Link>
             <Link to="/radio" className="nav-link d-flex align-items-center">
-              <FiRadio /><span className="ms-2 navbar-text">Radio</span>
+              <FiRadio className="fs-4"/><span className="ms-2 navbar-text">Radio</span>
             </Link>
           </div>
 
-          <form className="d-flex align-items-center" role="search">
-            <input className="form-control me-2" type="search" placeholder="Cerca" aria-label="Cerca" />
-            <button className="btn btn-outline-success" type="submit"><FiSearch /></button>
-          </form>
+          
 
           <Link to="/user" className="ms-3">
-            <FiUser className="user-icon" />
+            <FiUser className="user-icon text-white" />
           </Link>
         </div>
       </nav>

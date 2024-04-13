@@ -18,8 +18,8 @@ const HeroSection = () => {
   return (
     <div className="container vh-100">
       <div className="row vh-100">
-        <div className="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center align-items-md-start text-center text-md-left bg-black hero-text vh-50">
-          <h1 className="text-white Title">La Dorida Solution <span className='d-none d-xl-block'>è qui per te.</span></h1>
+        <div className="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center align-items-md-start text-center text-md-left bg-black hero-text vh-50 ">
+          <h1 className="text-white Title mt-3">La Dorida Solution <span className='d-none d-xl-block'>è qui per te.</span></h1>
           <h2 className="text-white Title2 d-md-none ">è qui per aiutarvi</h2>
          <button className='Call-Button mt-2 mt-md-3 p-md-3 p-2'>Preventivo gratuito</button>
         </div>

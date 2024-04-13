@@ -35,28 +35,37 @@
     
     .img-sovra {
       width: 100%; /* Su dispositivi mobili l'immagine nitida occuperà tutta la larghezza */
-      height: 40vh; /* L'altezza sarà il 100% dell'altezza della viewport */
+      height: 60vh; /* L'altezza sarà il 100% dell'altezza della viewport */
       right: 0;
       object-fit: cover;
       margin: 0;
       bottom: 0;
       position: relative;
-      opacity: 1; /* Rimuovi la trasparenza se era presente */
-      filter: blur(1px);
+   
+      
+      
       transition: opacity 2s ease-in-out;
     }
   
     .image-music {
-      height: 100vh; /* o puoi mantenere 330px se vuoi una altezza fissa */
+      height: 60vh; /* o puoi mantenere 330px se vuoi una altezza fissa */
     }
     .text-overlay{
       position:relative;
-      top: -19%;
-      margin-left: 15px;
+      top: -29%;
+      right: 18px;
       z-index: 10;
-      max-width: 50%;
+     
+     
       font-weight: 800;
+     
+    
+      
     }
+    .Call-Button{
+      display: none;
+    }
+
   }
   
   .text-overlay{
@@ -76,4 +85,20 @@
 
 .fw{
   font-weight: 900 !important;
+}
+
+.rotondo{
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-size: 17;
+  position: absolute;
+  top: 64%;
+  right: -60%;
+}
+
+.pos{
+  position: absolute;
+  
 }

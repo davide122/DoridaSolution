@@ -1,9 +1,10 @@
 /* Stili di base per la navbar */
 .navbar {
     background-color: #000; /* Sostituisci con un gradiente o un colore solido se preferisci */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
     padding: 1rem 0; /* Aumenta il padding verticale per un aspetto più "aerato" */
     transition: all 0.3s ease-in-out; /* Transizione morbida per gli effetti di hover e focus */
+    padding: 0px 10px 10px 10px;
 }
 
 /* Logo e branding */

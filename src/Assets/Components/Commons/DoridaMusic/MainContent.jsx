@@ -1,11 +1,12 @@
 import immagine from "../Image/prova.webp";
 import immagine2 from "../Image/prova.jpeg";
 import immagine3 from "../Image/prova.webp";
+import immagine4 from "../Image/salvatore-paky-cover-ts1647049432.webp";
 import { useEffect, useState } from "react";
 import { FiPlay } from "react-icons/fi";
 import "./Css/Maincontent.css"
 
-const immagini = [immagine, immagine2, immagine3];
+const immagini = [immagine, immagine2, immagine3, immagine4];
 const MainContent = () => {
   const [currentImage, setCurrentImage] = useState(0);
   useEffect(() => {
@@ -34,14 +35,18 @@ const MainContent = () => {
         className="img-sovra img-fullscreen "
       />
       <div className="text-overlay">
-        <p className="Titolo fs-4 my-0 fw">Prova1</p>
-        <h1 className="Titolo text-white text-start fw my-3">
-          La mia colonna sonora
+        <p className="fs-6 text-primary my-0 fw">Radio</p>
+        <h1 className="text-white text-start fw ">
+          La mia colonna...
         </h1>
-        <p className="fw fs-5">Another text</p>
-        <button className="Call-Button my-0 " onClick={playMusic}>
+        <p className="fs-6">Another text</p>
+        <button className="Call-Button my-0 d-md-block d-none " onClick={playMusic}>
           <FiPlay className="player-icon play" />
           Riproduci
+        </button>
+        <button className="Call-Button my-0 d-md-none d-block rotondo " onClick={playMusic}>
+          <FiPlay className="text-ce" />
+        
         </button>
       </div>
     </div>

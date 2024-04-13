@@ -12,6 +12,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Arriviamo from './Assets/Components/Sections/Arriviamo';
 import PageNotFound from './Assets/Components/Sections/PageNotFound';
 import Music from './Assets/Views/Music';
+import AboutPage from './Assets/Components/AboutPage/AboutPage';
 function App() {
   return (
     
@@ -21,6 +22,7 @@ function App() {
 <Route path='/home' element={<HomePage />}/>
 <Route path="*" element={<PageNotFound />} /> 
 <Route path ="/Music" element={<Music/>} />
+<Route path='/About' element={<AboutPage/>} />
   </Routes>
  </Router>
    
