@@ -40,11 +40,11 @@ const MainContent = () => {
           La mia colonna...
         </h1>
         <p className="fs-6">Another text</p>
-        <button className="Call-Button my-0 d-md-block d-none " onClick={playMusic}>
+        <button className="Call-Button my-0 d-md-block d-none " id="callnone" onClick={playMusic}>
           <FiPlay className="player-icon play" />
           Riproduci
         </button>
-        <button className="Call-Button my-0 d-md-none d-block rotondo " onClick={playMusic}>
+        <button className="Call-Button my-0 d-md-none d-block rotondo " id="callnone" onClick={playMusic}>
           <FiPlay className="text-ce" />
         
         </button>

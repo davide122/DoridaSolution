@@ -64,3 +64,8 @@
 .Offcanvas{
     background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgb(8, 8, 33) 35%, rgb(30, 15, 55) 80%) !important;
 }
+
+.gradient{
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgb(8, 8, 33) 35%, rgb(30, 15, 55) 80%) !important;
+
+}

@@ -38,7 +38,7 @@ const HeroSection = () => {
             </div>
             ) : (
               // Altrimenti mostra il video
-              <video src={Parla} className="vh-100 video d-md-block" autoPlay> </video>
+              <video src={Parla} className="video d-md-block" autoPlay> </video>
             )}
            
 

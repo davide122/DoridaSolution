@@ -11,6 +11,7 @@ import VideoPresentazione from "../Components/Sections/VideoPresentazione";
 import ServicesExplain from "../Components/ServicesComponent/ServicesExplain";
 import ExplainPeople from "../Components/Sections/ExplainPeople";
 import MyFooter from "../Components/Commons/FOOTER/MyFooter";
+import PeopleCarousel from "../Components/Carousel/PeopleCarousel";
 
 
 const HomePage = () => {

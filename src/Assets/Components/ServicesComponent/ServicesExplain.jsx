@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import Slider from 'react-slick';
 import ServiceModal from './ServiceModal'; 
-import verticale from "../Commons/Image/Intelligenza (1).png";
+import verticale from "../Commons/Image/Graficheexplain/WhatsApp Image 2024-04-12 at 12.55.04.jpeg";
 import verticale2 from "../Commons/Image/Aivertical.png";
-import orizzontale from "../Commons/Image/orizzontale.png";
-import orizzontale2 from "../Commons/Image/Art.png";
-import orizzontale3 from "../Commons/Image/Art (1).png";
-import orizzontaledevelop from "../Commons/Image/Webdevelopment.png";
-import orizzontaledevelop2 from "../Commons/Image/webdevelop2.png";
+import orizzontale from "../Commons/Image/Graficheexplain/WhatsApp Image 2024-04-12 at 12.04.11.jpeg";
+import orizzontale2 from "../Commons/Image/Graficheexplain/WhatsApp Image 2024-04-12 at 12.08.48.jpeg";
+import orizzontale3 from "../Commons/Image/Graficheexplain/WhatsApp Image 2024-04-12 at 12.04.11.jpeg";
+import orizzontaledevelop from "../Commons/Image/Graficheexplain/oriz2.jpeg";
+import orizzontaledevelop2 from "../Commons/Image/Graficheexplain/orizz.jpeg";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -43,7 +43,7 @@ const ServicesExplain = () => {
             colMdSize:"2",
             color:"Lilla;",
             images: [
-                { id: 'img1', src: orizzontale3, title: 'Consulenze Strategiche', color:"Blu", description: "La consulenza strategica di DORIDA SOLUTION si distingue per la sua disponibilità quasi ininterrotta, riconoscendo l'importanza di supportare i clienti in ogni fase del loro percorso verso il successo. Siamo consapevoli che nel dinamico mondo del digitale, la tempistica può essere cruciale; per questo motivo, il nostro team è accessibile quasi ogni ora del giorno, pronto a offrire la sua guida e il suo supporto tecnico e strategico quando più ne avete bisogno." ,verticale:true},
+                { id: 'img1', src: orizzontale3, title: 'Consulenze Strategiche', color:"Blu", description: "La consulenza strategica di DORIDA SOLUTION si distingue per la sua disponibilità quasi ininterrotta, riconoscendo l'importanza di supportare i clienti in ogni fase del loro percorso verso il successo. Siamo consapevoli che nel dinamico mondo del digitale, la tempistica può essere cruciale; per questo motivo, il nostro team è accessibile quasi ogni ora del giorno, pronto a offrire la sua guida e il suo supporto tecnico e strategico quando più ne avete bisogno." ,},
                 { id: 'img2', src: orizzontale2, title: 'Strategie Pubblicitarie',  color:"Lilla", description: "Le strategie pubblicitarie di DORIDA SOLUTION sono state progettate per massimizzare l'impatto e l'efficacia delle campagne dei nostri clienti nel dinamico mondo del digitale. La nostra filosofia si basa su un approccio olistico e personalizzato, che va ben oltre la semplice promozione di un prodotto o servizio. Comprendiamo che ogni brand ha una storia unica da raccontare e che ogni mercato ha le sue peculiarità. Per questo, le nostre strategie sono costruite attorno alle esigenze specifiche di ogni cliente, assicurando che ogni campagna pubblicitaria non solo raggiunga il suo pubblico target ma lo coinvolga in modo significativo." },
             ],
         },
@@ -52,7 +52,7 @@ const ServicesExplain = () => {
             colMdSize:"3",
             color:"Blu;",
             images: [
-                { id: 'img3', src: verticale, title: 'Intelligenza Artificiale', color:"Blu", description: "DORIDA SOLUTION offre servizi che integrano l'intelligenza artificiale nel marketing, sviluppo web, produzione di contenuti, e molto altro. Utilizzando l'AI, DORIDA SOLUTION è in grado di offrire soluzioni innovative e personalizzate che tengono conto delle esigenze specifiche di ogni progetto. Questo approccio consente di massimizzare l'impatto e l'efficacia delle strategie digitali implementate​​.", },
+                { id: 'img3', src: verticale, title: 'Intelligenza Artificiale', color:"Blu", description: "DORIDA SOLUTION offre servizi che integrano l'intelligenza artificiale nel marketing, sviluppo web, produzione di contenuti, e molto altro. Utilizzando l'AI, DORIDA SOLUTION è in grado di offrire soluzioni innovative e personalizzate che tengono conto delle esigenze specifiche di ogni progetto. Questo approccio consente di massimizzare l'impatto e l'efficacia delle strategie digitali implementate​​.", vertical: true },
             ],
         },
         {
@@ -69,7 +69,7 @@ const ServicesExplain = () => {
             colMdSize:"3",
             color:"Blu;",
             images: [
-                { id: 'img6', src: verticale2, title: 'Service 6', description: '...' },
+                { id: 'img6', src: verticale2, title: 'Service 6', description: '...', vertical: true },
             ],
         },
         {
@@ -90,45 +90,43 @@ const ServicesExplain = () => {
 
     return (
         <div className="container-fluid slide">
-            {/* Carosello visibile solo su dispositivi mobili */}
-            <div className="d-md-none">
-                <Slider {...settings} className='my-3'>
-                    {columnData.flatMap(column => column.images).map(image => (
-                        <div key={image.id} onClick={() => { setModalContent(image); setModalShow(true); }}>
-                            <img src={image.src} alt={image.title} className="img-fluid rounded-5" />
-                            
-                        </div>
-                    ))}
-                </Slider>
-            </div>
-
-            {/* Layout griglia per dispositivi non mobili */}
-            <div className="d-none d-md-flex row">
-                {columnData.map(column => (
-                    <div key={column.id} className={`col-md-${column.colMdSize}`}>
-                        {column.images.map(image => (
-                            <div key={image.id} className="mb-5">
-                                <img 
-                                    src={image.src} 
-                                    alt={image.title} 
-                                    className="img-fluid rounded-5" 
-                                    onClick={() => { setModalContent(image); setModalShow(true); }}
-                                />
-                                
-                            </div>
-                        ))}
+        {/* Carosello visibile solo su dispositivi mobili */}
+        <div className="d-md-none">
+            <Slider {...settings} className='my-3'>
+                {columnData.flatMap(column => column.images.filter(image => !image.vertical)).map(image => (
+                    <div key={image.id} onClick={() => { setModalContent(image); setModalShow(true); }}>
+                        <img src={image.src} alt={image.title} className="img-fluid rounded-2 " />
                     </div>
                 ))}
-            </div>
-
-            {modalContent && (
-                <ServiceModal
-                    show={modalShow}
-                    onHide={() => { setModalShow(false); setModalContent(null); }}
-                    serviceInfo={modalContent}
-                />
-            )}
+            </Slider>
         </div>
+
+        {/* Layout griglia per dispositivi non mobili */}
+        <div className="d-none d-md-flex row">
+            {columnData.map(column => (
+                <div key={column.id} className={`col-md-${column.colMdSize}`}>
+                    {column.images.map(image => (
+                        <div key={image.id} className={`mb-5 ${image.vertical ? 'd-none d-md-block' : ''}`}>
+                            <img 
+                                src={image.src} 
+                                alt={image.title} 
+                                className="img-fluid rounded-2" 
+                                onClick={() => { setModalContent(image); setModalShow(true); }}
+                            />
+                        </div>
+                    ))}
+                </div>
+            ))}
+        </div>
+
+        {modalContent && (
+            <ServiceModal
+                show={modalShow}
+                onHide={() => { setModalShow(false); setModalContent(null); }}
+                serviceInfo={modalContent}
+            />
+        )}
+    </div>
     );
 };
 

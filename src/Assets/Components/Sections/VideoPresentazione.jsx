@@ -25,11 +25,11 @@ const VideoPresentazione = () => {
   };
 
   return (
-    <div style={{ height: '100vh', width: '100%', overflow: '', position: 'relative' }}>
+    <div style={{ height: '100%', width: '100%', overflow: 'none', position: 'relative' }} className='videochange'>
       <video
         ref={videoRef}
         src="https://doridasolutionbucket.s3.eu-north-1.amazonaws.com/rinositoweb.mp4" type="video/mp4"
-        style={{ width: '100%', height: '100%', objectFit: 'cover', position:"relative", bottom:"-8px" }}
+        style={{ width: '100%', height: '100%', objectFit: 'cover', position:"relative", bottom:"" }}
         loop
         playsInline
         muted={isMuted}

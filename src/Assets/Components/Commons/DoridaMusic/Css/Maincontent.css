@@ -62,7 +62,16 @@
     
       
     }
-    .Call-Button{
+
+    
+    
+.videochange{
+ 
+width: 100%;
+height: 50vh !important;
+
+}
+    #callnone{
       display: none;
     }
 
