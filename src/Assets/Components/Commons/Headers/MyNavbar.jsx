@@ -4,13 +4,14 @@ import { Link } from 'react-router-dom';
 import logo from "../../Commons/Image/logo.png";
 import { Offcanvas } from 'react-bootstrap'; // Assicurati di avere importato Offcanvas
 import "./mynav.css"
+import dorin from "../Image/dorinindica.png"
 const MyNavbar = ({ className }) => {
     const [show, setShow] = useState(false);
 
     const toggleOffcanvas = () => setShow(!show);
 
     return (
-        <nav className={`navbar navbar-expand-lg navbar-dark ${className}`} style={{ backgroundColor: '#000' }}>
+        <nav className={`navbar navi navbar-expand-lg navbar-dark ${className}`} style={{ backgroundColor: '#000' }}>
             <div className="container-fluid">
                 <Link to="/" className="navbar-brand d-flex align-items-center">
                     <img src={logo} alt="Logo" height="40" className="me-2" />
@@ -45,15 +46,14 @@ const MyNavbar = ({ className }) => {
                     <FaUserCircle size={30} color="white" />
                 </Link>
 
-                <Offcanvas show={show} onHide={toggleOffcanvas} placement="end">
-                    <Offcanvas.Header closeButton>
-                        <Offcanvas.Title>Menu</Offcanvas.Title>
+                <Offcanvas show={show} onHide={toggleOffcanvas} placement="end" className="gradient fs-2 text-center d-flex justify-content-center align-items-center">
+                    <Offcanvas.Header closeButton className='text-white'>
                     </Offcanvas.Header>
-                    <Offcanvas.Body>
-                        <ul className="navbar-nav">
-                            <li className="nav-item">
-                                <Link to="/" className="nav-link" onClick={toggleOffcanvas}>
-                                    <FaHome className="me-2" />Home
+                    <Offcanvas.Body className='text-center'>
+                        <ul className="navbar-nav text-center">
+                            <li className="nav-item ">
+                                <Link to="/" className="nav-link " onClick={toggleOffcanvas}>
+                                    <FaHome className="me-2 " />Home
                                 </Link>
                             </li>
                             <li className="nav-item">
@@ -78,6 +78,9 @@ const MyNavbar = ({ className }) => {
                             </li>
                         </ul>
                     </Offcanvas.Body>
+                    <div>
+<img src={dorin} alt="" className='img-fluid' />
+                    </div>
                 </Offcanvas>
             </div>
         </nav>

@@ -12,18 +12,28 @@ import ServicesExplain from "../Components/ServicesComponent/ServicesExplain";
 import ExplainPeople from "../Components/Sections/ExplainPeople";
 import MyFooter from "../Components/Commons/FOOTER/MyFooter";
 import PeopleCarousel from "../Components/Carousel/PeopleCarousel";
+import davide from "../Components/Commons/Image/Fotonostre/davideoslo.png";
+import rino from "../Components/Commons/Image/Fotonostre/rinosolo.png";
+import dorin from "../Components/Commons/Image/Fotonostre/dorinsola.png";
 
+const imagePaths = [
+    davide, 
+    rino,
+   dorin,
+  
+  ];
 
 const HomePage = () => {
     return(
         <>
    
-        <MyNavbar></MyNavbar>
+        <MyNavbar className={"gradient"}></MyNavbar>
         <HeroSection ></HeroSection>
         <Carouseltext></Carouseltext>
        <ServicesSection></ServicesSection>
       <ServicesExplain></ServicesExplain>
       <ChangeColor></ChangeColor>
+      <PeopleCarousel/>
       <VideoPresentazione></VideoPresentazione>
       
    <MyFooter></MyFooter>

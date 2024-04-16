@@ -23,3 +23,8 @@
     border-radius: 0; /* Raggio del bordo, se necessario */
 }
 
+.vicini{
+  
+    position: absolute;
+left: -20px;
+}

@@ -1,6 +1,6 @@
 /* Stili di base per la navbar */
 .navbar {
-    background-color: #000; /* Sostituisci con un gradiente o un colore solido se preferisci */
+    background-color: #000;/* Sostituisci con un gradiente o un colore solido se preferisci */
     
     padding: 1rem 0; /* Aumenta il padding verticale per un aspetto più "aerato" */
     transition: all 0.3s ease-in-out; /* Transizione morbida per gli effetti di hover e focus */
@@ -57,9 +57,7 @@
 }
 
 /* Sfondo gradiente (opzionale) */
-.navbar {
-    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgb(8, 8, 33) 35%, rgb(30, 15, 55) 80%) !important;
-}
+
 
 .Offcanvas{
     background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgb(8, 8, 33) 35%, rgb(30, 15, 55) 80%) !important;
