@@ -10,7 +10,7 @@ const Arriviamo = () => {
 <Contact></Contact>
 <div className="divnova">
 </div>
-<h3 className="text-white fs-6 text-center mx-3">Se lascerai la tua email, avrai l'accesso a un buono del 20% sui primi servizi che acquisterai.</h3>
+<h3 className="text-white fs-6 text-center mx-3">Lascia la tua email e otterrai un buono del 20% sul tuo primo ordine.</h3>
 </div>
     )
 }

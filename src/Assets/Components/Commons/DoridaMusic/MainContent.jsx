@@ -1,22 +1,14 @@
-import immagineClear from "../Image/edsherranpeople.png"
-import imageblur from "../Image/Apple-Music-Live-Ed-Sheeran-with-guitar_big.jpg.large_2x.jpg"
-
-import marcomengoniclear from "../Image/marcomengoni.png"
-import marcomengoniblur from "../Image/mengoniblurr.jpg"
-
-import sferaclear from "../Image/IMAGEMUSIC/TOCLEAR.png"
-import sferablur from "../Image/IMAGEMUSIC/toblur.webp"
-
-
 
 import { useEffect, useState } from "react";
 import { FiPlay } from "react-icons/fi";
 import "./Css/Maincontent.css"
 
 const immagini = [
-  { blurred: imageblur, clear: immagineClear },
-  { blurred: marcomengoniblur, clear: marcomengoniclear },
-  { blurred: sferablur, clear: sferaclear },
+  { blurred: "https://doridasolutionbucket.s3.eu-north-1.amazonaws.com/MusicianCreator/rinoblurrato.jpg", clear: "https://doridasolutionbucket.s3.eu-north-1.amazonaws.com/MusicianCreator/rinotagliato.png" },
+  { blurred: "https://doridasolutionbucket.s3.eu-north-1.amazonaws.com/MusicianCreator/qualcunoblur.png", clear: "https://doridasolutionbucket.s3.eu-north-1.amazonaws.com/MusicianCreator/qualcunoclear.png" },
+  { blurred: "https://doridasolutionbucket.s3.eu-north-1.amazonaws.com/MusicianCreator/signorablur.png", clear: "https://doridasolutionbucket.s3.eu-north-1.amazonaws.com/MusicianCreator/signoraclear.png" },
+  { blurred: "https://doridasolutionbucket.s3.eu-north-1.amazonaws.com/MusicianCreator/Samira+B.png", clear: "https://doridasolutionbucket.s3.eu-north-1.amazonaws.com/MusicianCreator/Samira+T.png" },
+
 ];
 const MainContent = () => {
   const [currentImage, setCurrentImage] = useState(0);

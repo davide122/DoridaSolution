@@ -1,4 +1,4 @@
-.carousel {
+.carousel2 {
   overflow: hidden;
   position: relative;
   width: 100%;
@@ -14,7 +14,7 @@
 }
 
 .service-box {
-  min-width: 200px; /* Larghezza minima di ogni servizio per evitare sovrapposizioni */
+  min-width: 300px; /* Larghezza minima di ogni servizio per evitare sovrapposizioni */
   max-width: 220px;
   height: auto; /* Altezza in base al contenuto */
   margin: 0 1rem; /* Distanza tra i servizi */
@@ -44,7 +44,7 @@
 
 @media (max-width: 768px) {
   .service-box {
-    min-width: 50%; /* Più spazio per ogni servizio su dispositivi mobili */
+    min-width: 60%; /* Più spazio per ogni servizio su dispositivi mobili */
   }
 }
 

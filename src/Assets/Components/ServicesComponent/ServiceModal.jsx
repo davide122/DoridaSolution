@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Modal } from 'react-bootstrap';
-
+import "./Modal.css"
 
 const ServiceModal = ({ show, onHide, serviceInfo }) => {
     const modalBodyClass = serviceInfo.color === "Blu" ? "Blu" : "Lilla";
@@ -28,27 +28,25 @@ console.log(modalBodyClass);
 
     
   return (
-    <Modal show={show} onHide={onHide} size="xl" aria-labelledby="contained-modal-title-vcenter w-100"  centered>
-      <div className={`CloseButtonDiv ${Changebg}`}>
-<button onClick={onHide} className={`Close-Button`}></button>
-</div>
-      <Modal.Body id='prova' className={modalBodyClass}> 
-        <div className="container-fluid  w-100">
-            <div className="row">
-                <div className="col col-md-7 col-sm-12">
-                <h2 className={`Titolo ${modalBodyText}`}> {serviceInfo.title}</h2>
-        <p className='Sottotitolo'>{serviceInfo.description.slice(0,350)+"..."}</p>
-        <button className='Info-Button' onClick={handleShowMore}></button>
-                </div>
-                <div className="col col-md-5 max col-sm-12">
-<img src={serviceInfo.src} alt={serviceInfo.title} className='img-fluid imageExplain '/>
-                </div>
-            </div>
+    <Modal show={show} onHide={onHide} size="xl" aria-labelledby="contained-modal-title-vcenter" centered>
+  <div className={`CloseButtonDiv ${Changebg}`}>
+    <button onClick={onHide} className={`Close-Button`}></button>
+  </div>
+  <Modal.Body id='prova' className={modalBodyClass}> 
+    <div className="container-fluid">
+      <div className="row">
+        <div className="col-12 col-md-7 order-md-1 order-2">
+          <h2 className={`Titolo ${modalBodyText}`}> {serviceInfo.title}</h2>
+          <p className='Sottotitolo'>{serviceInfo.description.slice(0,350)+"..."}</p>
         </div>
-       
-      </Modal.Body>
-     
-    </Modal>
+        <div className="col-12 col-md-5 order-md-2 order-1">
+          <img src={serviceInfo.src} alt={serviceInfo.title} className='img-fluid imageExplain'/>
+        </div>
+      </div>
+    </div>
+  </Modal.Body>
+</Modal>
+
   );
 };
 

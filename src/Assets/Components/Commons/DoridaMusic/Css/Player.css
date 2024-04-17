@@ -1,49 +1,60 @@
-
 .player-bar {
-    height: 70px;
-   
-    background-color: black !important;
-    border-top: 1px solid white;
-  }
-  
-  .player-icon {
-    color: #fff;
-    margin: 0 15px;
-    cursor: pointer;
-  }
-  
-  .player-icon.play {
-    font-size: 30px;
-  }
-  
-  
-  
-
-/* Opzionale, stile per il bottone di play */
-.btn-play {
-  background-color: #1db954; /* Colore verde Spotify per il bottone play */
-  border: none;
   color: white;
-  padding: 10px 20px;
-  border-radius: 20px;
-  font-size: 16px;
-  display: flex;
+  background-color: #000000 !important; /* o qualsiasi altro colore tu preferisca */
+  font-family: Arial, sans-serif; /* o il tuo font preferito */
+padding: 10px 0px;
+}
+
+.cover {
+  width: 50px; /* o la dimensione che preferisci */
+  height: auto;
+  margin-right: 15px;
+}
+
+.track-info {
+  font-size: 5px !important;
+}
+
+.track-title {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.track-artist {
+  font-size: 10px !important;
+  font-weight: 100;
+}
+
+.control-icon {
+  font-size: 1.5rem; /* dimensione delle icone dei controlli */
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.volume-slider {
+  width: 200px !important; /* lunghezza dello slider del volume */
   align-items: center;
-  justify-content: center;
-  gap: 5px;
 }
 
-.btn-play:hover {
-  opacity: 0.8; /* Effetto al passaggio del mouse */
-}
+/* Media query per desktop */
+@media (min-width: 992px) {
+  .track-info {
+    display: block;
+  }
 
+  .player-bar {
+    padding: 15px 0;
+  }
 
+  .cover {
+    width: 80px; /* dimensione più grande per desktop */
+  }
 
+  .control-icon {
+    font-size: 2rem; /* icone più grandi per desktop */
+  }
 
-
-.playlistcard{
-width: 100%;
-object-fit: cover;
-padding: 10px 10px 10px 10px;
-
+  .volume-slider {
+    width: 150px; /* slider del volume più lungo per desktop */
+  }
 }

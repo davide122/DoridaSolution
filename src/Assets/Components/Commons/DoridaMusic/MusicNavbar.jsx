@@ -5,7 +5,7 @@ import "./Css/Musicnav.css"
 const MusicNavbar = () => {
   return(
     <nav className="navbar navbar-dark bg-black">
-      <div className="container">
+      <div className="container-fluid">
         <Link to="/" className="navbar-brand d-flex align-items-center">
           <img src={logo} alt="Dorida Logo" height="60" className="d-inline-block align-top" />
           <span className='navbar-text ms-2'>Dorida Music</span>

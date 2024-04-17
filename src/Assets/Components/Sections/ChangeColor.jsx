@@ -11,13 +11,13 @@ const App = () => {
       const scrollPosition = window.scrollY + window.innerHeight;
 
       if (scrollPosition >= section3Top) {
-        setColor('#000000'); // Cambia al colore della terza sezione
+        setColor('#EC6AFF'); // Cambia al colore della terza sezione
         setTitle('Unica'); // Cambia al titolo della terza sezione
       } else if (scrollPosition >= section2Top) {
         setColor('#0f0e3e'); // Cambia al colore della seconda sezione
         setTitle('Innovativa'); // Cambia al titolo della seconda sezione
       } else {
-        setColor('#DA70D6'); // Colore originale
+        setColor('#000000'); // Colore originale
         setTitle('Visionaria'); // Titolo originale
       }
     };
@@ -31,6 +31,8 @@ const App = () => {
 
   return (
     <div>
+      
+
       <div id="changeColor" className="section w-100" style={{backgroundColor: color}}>
         <h2 className='Title text-white ' id='title1'>{title}</h2>
       </div>

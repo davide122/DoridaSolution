@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Slider from 'react-slick';
 import ServiceModal from './ServiceModal'; 
 import verticale from "../Commons/Image/Graficheexplain/WhatsApp Image 2024-04-12 at 12.55.04.jpeg";
-import verticale2 from "../Commons/Image/Aivertical.png";
 import orizzontale from "../Commons/Image/Graficheexplain/WhatsApp Image 2024-04-12 at 12.04.11.jpeg";
 import orizzontale2 from "../Commons/Image/Graficheexplain/WhatsApp Image 2024-04-12 at 12.08.48.jpeg";
 import orizzontale3 from "../Commons/Image/Graficheexplain/WhatsApp Image 2024-04-12 at 12.04.11.jpeg";
@@ -69,7 +68,7 @@ const ServicesExplain = () => {
             colMdSize:"3",
             color:"Blu;",
             images: [
-                { id: 'img6', src: verticale2, title: 'Service 6', description: '...', vertical: true },
+                { id: 'img6', src: verticale, title: 'Service 6', description: '...', vertical: true },
             ],
         },
         {

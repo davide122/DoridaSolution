@@ -2,9 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { motion, useAnimation, useTransform, useViewportScroll } from 'framer-motion';
 import useViewportVisibility from '../../Hooks/useViewportVisibility';
 import './AboutPagecss/About.css';
-import dorin from "../Commons/Image/Fotonostre/dorin.png"
-import davide from "../Commons/Image/Fotonostre/davide.png"
-import rino from "../Commons/Image/Fotonostre/rino1.png"
+
 import MyNavbar from '../Commons/Headers/MyNavbar';
 import AboutEx from './AboutEx';
 const aboutData = [
@@ -12,19 +10,19 @@ const aboutData = [
       id: 1,
       title: "Dorin ciofalo - Digital Marketing",
       description: "Dorida Solution è all'avanguardia nelle strategie di digital marketing, puntando su innovazione e personalizzazione per raggiungere il pubblico target.",
-      image: dorin, // Sostituisci con il percorso effettivo dell'immagine
+      image: "https://doridasolutionbucket.s3.eu-north-1.amazonaws.com/FotoNostre/dorin.png", // Sostituisci con il percorso effettivo dell'immagine
     },
     {
       id: 2,
       title: "Davide Marchica - Full stack Web Developer",
       description: "Specialisti nello sviluppo di soluzioni web full-stack, creiamo esperienze digitali coinvolgenti e performanti, adattate alle esigenze di ogni cliente.",
-      image: davide, // Sostituisci con il percorso effettivo dell'immagine
+      image: "https://doridasolutionbucket.s3.eu-north-1.amazonaws.com/FotoNostre/davide.png", // Sostituisci con il percorso effettivo dell'immagine
     },
     {
       id: 3,
       title: "Rino Ciofalo - Song writer",
       description: "Esploriamo costantemente nuovi orizzonti nell'AI per offrire servizi che trasformano le operazioni aziendali e forniscono insight senza precedenti.",
-      image: rino, // Sostituisci con il percorso effettivo dell'immagine
+      image: "https://doridasolutionbucket.s3.eu-north-1.amazonaws.com/FotoNostre/rino.png", // Sostituisci con il percorso effettivo dell'immagine
     },
   ];
 

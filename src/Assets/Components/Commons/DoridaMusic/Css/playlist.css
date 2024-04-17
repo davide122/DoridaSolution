@@ -28,7 +28,7 @@
     width: 100%;
     height: 240px; /* Set a fixed height for images */
     object-fit: cover; /* Ensures the image covers the area without distorting */
- border-radius: 10px 10px 10px 10px;
+ border-radius: 7px 7px 7px 7px;
   }
 
 
@@ -48,11 +48,7 @@
     cursor: pointer;
   }
   
-  .playlist-card p {
-    margin: 4px 8px; /* Small margin for text inside card */
-    text-align: center;
-    color: #333; /* Dark grey color for text */
-  }
+  
   
   /* Hide scrollbar aesthetically */
   .carousel::-webkit-scrollbar {
@@ -83,12 +79,12 @@
   /* Responsive adjustments */
   @media (max-width: 576px) {
     .playlist-card {
-      width: 130px; /* Smaller cards on smaller screens */
-      height: 130px;
+      width: 140px; /* Smaller cards on smaller screens */
+      height: 150px;
     }
   
     .playlist-card img {
-      height: 130px;
+      height: 150px;
     }
     .carousel-container {
       position: relative;

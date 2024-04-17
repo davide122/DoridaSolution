@@ -31,7 +31,7 @@ const Carouseltext = () => {
   ]
   const ExtendedServices = [...Services, ...Services];
   return (
-    <div className="carousel">
+    <div className="carousel2">
       <div className="scrolling-container me-5">
         {ExtendedServices.map((service, index) => (
           <motion.div 
@@ -41,7 +41,7 @@ const Carouseltext = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: (index % Services.length) * 0.2 }}
           >
-            <p className='fs-6 ms-3'>{service}</p>
+            <p className='fs-4 Title'>{service}</p>
           </motion.div>
         ))}
       </div>
